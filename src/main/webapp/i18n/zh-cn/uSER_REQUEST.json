@@ -1,0 +1,29 @@
+{
+  "managementsystemApp": {
+    "uSER_REQUEST": {
+      "home": {
+        "title": "USER REQUESTS",
+        "createLabel": "创建新 USER REQUEST",
+        "createOrEditLabel": "创建或编辑 USER REQUEST",
+        "search": "查找 USER REQUEST",
+        "notFound": "No USER REQUESTS found"
+      },
+      "created": "USER REQUEST {{ param }} 创建成功",
+      "updated": "USER REQUEST {{ param }} 更新成功",
+      "deleted": "USER REQUEST {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 USER REQUEST {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "USER REQUEST"
+      },
+      "request_id": "Request Id",
+      "submitted_by": "Submitted By",
+      "submitted_date": "Submitted Date",
+      "approved_by": "Approved By",
+      "approval_date": "Approval Date",
+      "status": "Status",
+      "account_numer": "Account Numer"
+    }
+  }
+}

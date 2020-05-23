@@ -1,0 +1,76 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-user-request-heading" jhiTranslate="managementsystemApp.uSER_REQUEST.home.createOrEditLabel">Create or edit a USER REQUEST</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.request_id" for="field_request_id">Request Id</label>
+                    <input type="number" class="form-control" name="request_id" id="field_request_id"
+                           formControlName="request_id"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.submitted_by" for="field_submitted_by">Submitted By</label>
+                    <input type="text" class="form-control" name="submitted_by" id="field_submitted_by"
+                           formControlName="submitted_by"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.submitted_date" for="field_submitted_date">Submitted Date</label>
+                    <div class="input-group">
+                        <input id="field_submitted_date" type="text" class="form-control" name="submitted_date" ngbDatepicker #submitted_dateDp="ngbDatepicker" formControlName="submitted_date"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="submitted_dateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.approved_by" for="field_approved_by">Approved By</label>
+                    <input type="text" class="form-control" name="approved_by" id="field_approved_by"
+                           formControlName="approved_by"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.approval_date" for="field_approval_date">Approval Date</label>
+                    <div class="input-group">
+                        <input id="field_approval_date" type="text" class="form-control" name="approval_date" ngbDatepicker #approval_dateDp="ngbDatepicker" formControlName="approval_date"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="approval_dateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.status" for="field_status">Status</label>
+                    <input type="text" class="form-control" name="status" id="field_status"
+                           formControlName="status"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="managementsystemApp.uSER_REQUEST.account_numer" for="field_account_numer">Account Numer</label>
+                    <input type="number" class="form-control" name="account_numer" id="field_account_numer"
+                           formControlName="account_numer"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

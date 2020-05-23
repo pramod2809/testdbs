@@ -1,0 +1,29 @@
+{
+  "managementsystemApp": {
+    "uSER_REQUEST": {
+      "home": {
+        "title": "USER REQUESTS",
+        "createLabel": "Create a new USER REQUEST",
+        "createOrEditLabel": "Create or edit a USER REQUEST",
+        "search": "Search for USER REQUEST",
+        "notFound": "No USER REQUESTS found"
+      },
+      "created": "A new USER REQUEST is created with identifier {{ param }}",
+      "updated": "A USER REQUEST is updated with identifier {{ param }}",
+      "deleted": "A USER REQUEST is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete USER REQUEST {{ id }}?"
+      },
+      "detail": {
+        "title": "USER REQUEST"
+      },
+      "request_id": "Request Id",
+      "submitted_by": "Submitted By",
+      "submitted_date": "Submitted Date",
+      "approved_by": "Approved By",
+      "approval_date": "Approval Date",
+      "status": "Status",
+      "account_numer": "Account Numer"
+    }
+  }
+}
